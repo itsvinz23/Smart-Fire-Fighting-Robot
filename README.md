@@ -186,12 +186,36 @@ Smart-Fire-Fighting-Robot/
   <tr>
     <td align="center">
       <a href="https://github.com/itsvinz23">
-        <img src="https://avatars.githubusercontent.com/u/your-profile" width="100px;" alt=""/>
+        <img src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000" width="100px;" alt=""/>
         <br />
-        <sub><b>Vinura (itsvinz23)</b></sub>
+        <sub><b>Janindu Vinura (Vinz)</b></sub>
       </a>
     </td>
-    <!-- Add others if any -->
+    <td align="center">
+      <a href="https://github.com/cha0005">
+        <img src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000" width="100px;" alt=""/>
+        <br />
+        <sub><b>P.D.C.DE SILVA (cha0005)</b></sub>
+      </a>
+    </td><td align="center">
+      <a href="https://github.com/JayDeRukz">
+        <img src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000" width="100px;" alt=""/>
+        <br />
+        <sub><b>Jithmitha Rukshan (Rookie_xR)</b></sub>
+      </a>
+    </td><td align="center">
+      <a href="https://github.com/Ravindurrl">
+        <img src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000" width="100px;" alt=""/>
+        <br />
+        <sub><b>Ravindu Hettiarachchi (Ravindurrl)</b></sub>
+      </a>
+    </td><td align="center">
+      <a href="https://github.com/TharushiNK">
+        <img src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000" width="100px;" alt=""/>
+        <br />
+        <sub><b>Tharushi Nikethana (TharushiNK)</b></sub>
+      </a>
+    </td>
   </tr>
 </table>
 
