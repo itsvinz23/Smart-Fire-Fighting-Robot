@@ -1,29 +1,29 @@
-const int waterSensorPin = A0; // analog input
-const int buzzerPin = D1;      
-const int ledPin = D2;         
+const int waterSensorPin = A8; 
+const int buzzerPin = D20;      
+const int ledPin = D21;  
 
 void setup() {
-  Serial.begin(115200);
-  pinMode(buzzerPin, OUTPUT);
-  pinMode(ledPin, OUTPUT);
-  digitalWrite(buzzerPin, LOW);
-  digitalWrite(ledPin, LOW);
+  Serial.begin(9600);             
+  pinMode(buzzerPin, OUTPUT);      
+  pinMode(ledPin, OUTPUT);         
+  digitalWrite(buzzerPin, LOW);    
+  digitalWrite(ledPin, LOW);       
 
   Serial.println("-----Water Level Monitoring Started-----");
 }
 
 void loop() {
-  int waterValue = analogRead(waterSensorPin); //reading sensor values
+  int waterValue = analogRead(waterSensorPin); 
   Serial.print("Water Sensor Value: ");
   Serial.println(waterValue);
 
-  // converting the water value into percentage
+  // Convert sensor value to percentage
   int percentage = map(waterValue, 0, 1023, 0, 100);
   Serial.print("Water Level: ");
   Serial.print(percentage);
   Serial.println("%");
 
-  // trigger alert when water level is in LOW
+  // Trigger alert if water level is too low
   if (waterValue < 200) {
     Serial.println("Water Level: LOW - ALERT");
     digitalWrite(buzzerPin, HIGH);
@@ -35,5 +35,5 @@ void loop() {
   }
 
   Serial.println("----------------------------");
-  delay(1000); //check for every second
+  delay(1000); // Wait 1 second before next check
 }
