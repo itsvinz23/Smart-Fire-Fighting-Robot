@@ -1,25 +1,39 @@
-void setup() 
-{
-  Serial.begin(115200); // Initialize Serial Monitor
+#include <DHT.h>
+#include <SoftwareSerial.h>
+
+#define DHTPIN 9
+#define DHTTYPE DHT11
+
+
+DHT dht(DHTPIN, DHTTYPE);
+
+// Use Serial1 on Mega: 18 (TX), 19 (RX)
+SoftwareSerial espSerial(18, 19); // RX, TX (connected to NodeMCU via level converter)
+
+void setup() {
+  dht.begin();
+  
+  Serial.begin(9600);      
+  espSerial.begin(115200);  
 }
 
-void loop() 
-{
-  int analogValue = analogRead(A0); // Read raw analog input
+void loop() {
+  float temp = dht.readTemperature();
+  float hum = dht.readHumidity();
+  bool fireDetected = digitalRead(FIRE_SENSOR_PIN) == HIGH;
 
-  // Convert analog value to voltage (0-5V range)
-  float voltage = analogValue * (5.0 / 1023.0);
+  // Check for sensor errors
+  if (isnan(temp) || isnan(hum)) {
+    Serial.println("Failed to read DHT!");
+    return;
+  }
 
-  // Calculate temperature in Celsius (LM35 outputs 10mV per °C)
-  float temperatureC = voltage * 100;
+  // JSON format
+  String data = "{\"temp\":" + String(temp, 1) +
+                ",\"humidity\":" + String(hum, 1) +"\"}";
 
-  Serial.print("Analog: ");
-  Serial.print(analogValue);
-  Serial.print(" | Voltage: ");
-  Serial.print(voltage, 3);
-  Serial.print(" V | Temp: ");
-  Serial.print(temperatureC);
-  Serial.println(" °C");
+  espSerial.println(data); 
+  Serial.println(data);   
 
-  delay(1000); 
+  delay(2000);
 }
