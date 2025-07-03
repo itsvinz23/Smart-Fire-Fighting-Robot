@@ -14,7 +14,7 @@ const char* WIFI_PASSWORD = "Password123"; // Wifi password
 
 // Firebase configuration to access the database directly
 #define FIREBASE_HOST "firebot-16638-default-rtdb.asia-southeast1.firebasedatabase.app" // The database URL
-#define FIREBASE_AUTH "something23456789" // Database secret code
+#define FIREBASE_AUTH "IZInwxAyzE635h5T9SSFjt4z2G4oxgdo4hZrY5Zm" // Database secret code
 
 // Firebase Data Object
 FirebaseData firebaseData;
