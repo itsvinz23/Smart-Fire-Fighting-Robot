@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "944962450736",
+    "firebase_url": "https://fire-fighter-7cee9-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fire-fighter-7cee9",
+    "storage_bucket": "fire-fighter-7cee9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944962450736:android:802dc0b23207d6002ac4f5",
+        "android_client_info": {
+          "package_name": "com.s23010921.firefighter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhQzKELNqMYNYxzqPzbfLLKY4zrZrckag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
