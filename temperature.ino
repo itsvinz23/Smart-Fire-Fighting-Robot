@@ -29,8 +29,9 @@ void loop() {
   }
 
   // JSON format
-  String data = "{\"temp\":" + String(temp, 1) +
-                ",\"humidity\":" + String(hum, 1) +"\"}";
+ String data = "{\"temp\":" + String(temp, 1) +
+              ",\"humidity\":" + String(hum, 1) + "}";
+
 
   espSerial.println(data); 
   Serial.println(data);   
